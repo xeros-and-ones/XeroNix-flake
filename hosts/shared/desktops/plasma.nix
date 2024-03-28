@@ -4,5 +4,7 @@
     displayManager.sddm.enable = true;
     desktopManager.plasma5.enable = true;
   };
-  environment.systemPackages = with pkgs; [kdePackages.qtstyleplugin-kvantum];
+  environment.systemPackages = [
+    pkgs.libsForQt5.qtstyleplugin-kvantum
+  ];
 }
