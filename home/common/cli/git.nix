@@ -19,7 +19,7 @@
       credential.helper = "cache";
       core = {
         editor = "emacsclient -c -a 'emacs'";
-        pager = "delta";
+        # pager = "delta";
       };
       interactive.diffFilter = "delta --color-only";
       merge.conflictstyle = "diff3";
