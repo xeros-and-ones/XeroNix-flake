@@ -4,6 +4,17 @@
     package = pkgs.gitFull;
     userName = "Mohamed Tarek";
     userEmail = "mohamed96tarek@hotmail.com";
+    delta = {
+      enable = true;
+      package = pkgs.delta;
+      options = {
+        navigate = true;
+        light = false;
+        side-by-side = false;
+        line-numbers = true;
+        syntax-theme = "gruvbox-dark";
+      };
+    };
     extraConfig = {
       credential.helper = "cache";
       core = {
@@ -14,17 +25,6 @@
       merge.conflictstyle = "diff3";
       diff.colorMoved = "default";
       github.user = "xeros-and-ones";
-      delta = {
-        enable = true;
-        package = pkgs.delta;
-        options = {
-          navigate = true;
-          light = false;
-          side-by-side = false;
-          line-numbers = true;
-          syntax-theme = "gruvbox-dark";
-        };
-      };
     };
   };
 }
