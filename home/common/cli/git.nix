@@ -21,7 +21,7 @@
         editor = "emacsclient -c -a 'emacs'";
         # pager = "delta";
       };
-      interactive.diffFilter = "delta --color-only";
+      # interactive.diffFilter = "delta --color-only";
       merge.conflictstyle = "diff3";
       diff.colorMoved = "default";
       github.user = "xeros-and-ones";
