@@ -16,6 +16,7 @@
       github.user = "xeros-and-ones";
       delta = {
         enable = true;
+        package = pkgs.delta;
         options = {
           navigate = true;
           light = false;
