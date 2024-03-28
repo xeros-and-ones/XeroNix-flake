@@ -18,13 +18,23 @@
     extraConfig = {
       credential.helper = "cache";
       core = {
-        editor = "emacsclient -c -a 'emacs'";
+        editor = "emacsclient -t";
         # pager = "delta";
       };
       # interactive.diffFilter = "delta --color-only";
       merge.conflictstyle = "diff3";
       diff.colorMoved = "default";
       github.user = "xeros-and-ones";
+    };
+  };
+
+  programs.gh = {
+    enable = true;
+    package = pkgs.gh;
+    settings = {
+      git_protocol = "ssh";
+      editor = "emacsclient -t";
+      prompt = "enabled";
     };
   };
 }
