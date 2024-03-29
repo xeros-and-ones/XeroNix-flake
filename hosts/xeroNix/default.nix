@@ -25,6 +25,7 @@
     ../shared/core/fonts.nix
 
     ../shared/optional/steam.nix
+    ../shared/optional/virtualisation.nix
   ];
 
   networking = {
