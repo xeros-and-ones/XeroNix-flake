@@ -1,11 +1,13 @@
 {
-  virtualisation.libvirtd = {
-    enable = true;
+  virtualisation = {
     spiceUSBRedirection.enable = true;
-    qemu = {
-      runAsRoot = true;
-      swtpm.enable = true;
+    libvirtd = {
+      enable = true;
+      qemu = {
+        runAsRoot = true;
+        swtpm.enable = true;
+      };
     };
+    programs.virt-manager.enable = true;
   };
-  programs.virt-manager.enable = true;
 }
