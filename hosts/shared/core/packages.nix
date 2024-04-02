@@ -1,4 +1,10 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  emacsPackagesFor,
+  ...
+}: let
+  myEmacs = (emacsPackagesFor pkgs.emacs).emacsWithPackages (epkgs: with epkgs; [vterm treesit-grammars.with-all-grammars]);
+in {
   environment = {
     systemPackages = with pkgs; [
       # network tools
@@ -7,7 +13,7 @@
       neovim
       vscode
       kate
-      (emacs.override {
+      (myEmacs.override {
         withNativeCompilation = true;
         withTreeSitter = true;
         withGTK3 = true;
