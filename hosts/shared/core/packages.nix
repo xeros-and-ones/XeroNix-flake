@@ -1,6 +1,6 @@
 {pkgs, ...}: let
   myEmacs =
-    (pkgs.emacsPackagesFor (pkgs.emacs.override {
+    (pkgs.emacsPackagesFor (pkgs.emacs29.override {
       withNativeCompilation = true;
       withTreeSitter = true;
       withGTK3 = true;
