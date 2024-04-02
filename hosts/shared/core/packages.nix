@@ -1,9 +1,11 @@
-{
-  pkgs,
-  emacsPackagesFor,
-  ...
-}: let
-  myEmacs = (emacsPackagesFor pkgs.emacs).emacsWithPackages (epkgs: with epkgs; [vterm treesit-grammars.with-all-grammars]);
+{pkgs, ...}: let
+  myEmacs =
+    (pkgs.emacsPackagesFor (pkgs.emacs.override {
+      withNativeCompilation = true;
+      withTreeSitter = true;
+      withGTK3 = true;
+    }))
+    .emacsWithPackages (epkgs: with epkgs; [vterm treesit-grammars.with-all-grammars]);
 in {
   environment = {
     systemPackages = with pkgs; [
@@ -13,11 +15,7 @@ in {
       neovim
       vscode
       kate
-      (myEmacs.override {
-        withNativeCompilation = true;
-        withTreeSitter = true;
-        withGTK3 = true;
-      })
+      myEmacs
 
       # browsers
       (google-chrome.override {
