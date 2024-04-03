@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.mpv = {
     enable = true;
-    scripts = with pkgs.mpvSscripts; [mpris uosc thumbfast];
+    scripts = with pkgs.mpvScripts; [mpris uosc thumbfast];
   };
 }
