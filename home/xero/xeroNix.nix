@@ -22,7 +22,7 @@
       ../common/browsers/firefox
       ../common/cli/git.nix
 
-      ../common/media/video-players.nix
+      ../common/media/mpv.nix
       ../common/media/audio-players.nix
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);

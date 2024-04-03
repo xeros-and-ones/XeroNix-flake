@@ -10,8 +10,5 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
-    mpv = prev.mpv.override {
-      scripts = with final.mpvScripts; [mpris uosc thumbfast];
-    };
   };
 }
