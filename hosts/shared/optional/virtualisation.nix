@@ -2,6 +2,7 @@
   virtualisation = {
     spiceUSBRedirection.enable = true;
     waydroid.enable = true;
+    lxd.enable = true;
     libvirtd = {
       enable = true;
       qemu = {
