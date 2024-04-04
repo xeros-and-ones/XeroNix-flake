@@ -30,7 +30,7 @@
 
   networking = {
     hostName = "xeroNix"; # Define your hostname.
-    networkmanager.enable = false;
+    networkmanager.enable = true;
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
     # Open ports in the firewall.
