@@ -24,6 +24,8 @@
 
       ../common/media/mpv.nix
       ../common/media/audio-players.nix
+
+      ../common/keepass.nix
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);
 
