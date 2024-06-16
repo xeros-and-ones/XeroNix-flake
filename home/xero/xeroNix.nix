@@ -23,7 +23,7 @@
       ../common/cli/git.nix
 
       ../common/media/mpv.nix
-      ../common/media/audio-players.nix
+      ../common/media/media-players.nix
 
       ../common/keepass.nix
     ]

@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.mpv = {
-    enable = true;
+    enable = false;
     scripts = with pkgs.mpvScripts; [mpris uosc thumbfast];
     config = {
       force-window = true;
