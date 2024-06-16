@@ -26,6 +26,7 @@
 
     ../shared/optional/steam.nix
     ../shared/optional/virtualisation.nix
+    ../shared/optional/droidcam.nix
   ];
 
   networking = {
