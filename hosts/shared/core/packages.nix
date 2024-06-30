@@ -123,7 +123,7 @@ in {
       # nix tools
       nil
       alejandra
-      nixfmt
+      nixfmt-classic
 
       #-- bash
       nodePackages.bash-language-server
