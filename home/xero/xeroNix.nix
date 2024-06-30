@@ -58,7 +58,6 @@
     };
   };
   # programs.neovim.enable = true;
-  # home.packages = with pkgs; [ steam ];
 
   programs.home-manager.enable = true;
 
