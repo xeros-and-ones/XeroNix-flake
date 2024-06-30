@@ -59,6 +59,7 @@ in {
       libva-utils
       vdpauinfo
       intel-gpu-tools
+      bleachbit
 
       # clipboard tools
       xclip
