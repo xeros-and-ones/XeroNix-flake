@@ -11,8 +11,6 @@
   };
   hardware.opengl = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
 
     extraPackages = with pkgs; [
       intel-vaapi-driver # LIBVA_DRIVER_NAME = "i965"
