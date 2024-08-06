@@ -6,6 +6,14 @@
       withGTK3 = true;
     }))
     .emacsWithPackages (epkgs: with epkgs; [vterm treesit-grammars.with-all-grammars]);
+     chrome-125 = (import (builtins.fetchGit {
+         # Descriptive name to make the store path easier to identify
+         name = "my-old-revision";
+         url = "https://github.com/NixOS/nixpkgs/";
+         ref = "refs/heads/nixpkgs-unstable";
+         rev = "9957cd48326fe8dbd52fdc50dd2502307f188b0d";
+     }) {inherit system;}).google-chrome
+
 in {
   environment = {
     systemPackages = with pkgs; [
@@ -18,13 +26,7 @@ in {
       myEmacs
 
       # browsers
-      (import (builtins.fetchGit {
-         # Descriptive name to make the store path easier to identify
-         name = "my-old-revision";
-         url = "https://github.com/NixOS/nixpkgs/";
-         ref = "refs/heads/nixpkgs-unstable";
-         rev = "9957cd48326fe8dbd52fdc50dd2502307f188b0d";
-     }) {inherit system;}).(google-chrome.override {
+chrome-125.override {
         commandLineArgs =
           ""
           + " --enable-zero-copy" # dont enable in about:flags
@@ -42,7 +44,6 @@ in {
           + "Vulkan,"
           + " --use-vulkan";
       })
-
       # terminal $ mux
       kitty
       zellij
