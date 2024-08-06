@@ -6,6 +6,12 @@
       withGTK3 = true;
     }))
     .emacsWithPackages (epkgs: with epkgs; [vterm treesit-grammars.with-all-grammars]);
+
+    chrome-125-tarball = import (builtins.fetchTarball {
+        url = "https://github.com/NixOS/nixpkgs/archive/67b4bf1df4ae54d6866d78ccbd1ac7e8a8db8b73.tar.gz";
+    }) {};
+
+    myChrome = chrome-125-tarball.google-chrome;
 in {
   environment = {
     systemPackages = with pkgs; [
@@ -18,7 +24,7 @@ in {
       myEmacs
 
       # browsers
-      (google-chrome.override {
+      (myChrome.override {
         commandLineArgs =
           ""
           + " --enable-zero-copy" # dont enable in about:flags
