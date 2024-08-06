@@ -5,6 +5,6 @@
     displayManager.sddm.enable = true;
   };
   environment.systemPackages = [
-    pkgs.libsForQt5.qtstyleplugin-kvantum
+    pkgs.kdePackages.qtstyleplugin-kvantum
   ];
 }

@@ -44,9 +44,6 @@
     # proxy.default = "http://user:password@proxy:port/";
     # proxy.noProxy = "126.0.0.1,localhost,internal.domain";
   };
-  boot = {
-    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
