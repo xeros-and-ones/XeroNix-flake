@@ -4,7 +4,7 @@
     xserver.desktopManager.plasma5.enable = true;
     displayManager.sddm.enable = true;
   };
-  environment.systemPackages = [
-    pkgs.kdePackages.qtstyleplugin-kvantum
+  environment.systemPackages = with pkgs; [
+    kdePackages.qtstyleplugin-kvantum libsForQt5.qtstyleplugin-kvantum
   ];
 }
