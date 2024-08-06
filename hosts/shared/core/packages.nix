@@ -10,15 +10,11 @@
       withGTK3 = true;
     }))
     .emacsWithPackages (epkgs: with epkgs; [vterm treesit-grammars.with-all-grammars]);
-  custom-chrome =
-    (import (builtins.fetchGit {
-      # Descriptive name to make the store path easier to identify
-      name = "my-old-revision";
-      url = "https://github.com/NixOS/nixpkgs/";
-      ref = "refs/heads/nixpkgs-unstable";
-      rev = "67b4bf1df4ae54d6866d78ccbd1ac7e8a8db8b73";
-    }) {inherit system;})
-    .google-chrome;
+  pkgsChrome = import (builtins.fetchTarball {
+    url = "https://github.com/NixOS/nixpkgs/archive/67b4bf1df4ae54d6866d78ccbd1ac7e8a8db8b73.tar.gz";
+    sha256 = "07gzgcgaclgand7j99w45r07gc464b5jbpaa3wmv6nzwzdb3v3q4";
+  }) {};
+  myChrome = pkgsChrome.google-chrome;
 in {
   environment = {
     systemPackages = with pkgs; [
@@ -31,7 +27,7 @@ in {
       myEmacs
 
       # browsers
-      (custom-chrome.override {
+      (myChrome.override {
         commandLineArgs =
           ""
           + " --enable-zero-copy" # dont enable in about:flags
