@@ -1,8 +1,4 @@
-{
-  pkgs,
-  system,
-  ...
-}: let
+{pkgs, ...}: let
   myEmacs =
     (pkgs.emacsPackagesFor (pkgs.emacs29.override {
       withNativeCompilation = true;
@@ -10,15 +6,6 @@
       withGTK3 = true;
     }))
     .emacsWithPackages (epkgs: with epkgs; [vterm treesit-grammars.with-all-grammars]);
-  pkgsChrome = import (builtins.fetchGit {
-    # Descriptive name to make the store path easier to identify
-    name = "my-old-revision";
-    url = "https://github.com/NixOS/nixpkgs/";
-    ref = "refs/heads/nixos-unstable";
-    rev = "67b4bf1df4ae54d6866d78ccbd1ac7e8a8db8b73";
-  }) {};
-
-  myChrome = pkgsChrome.google-chrome;
 in {
   environment = {
     systemPackages = with pkgs; [
@@ -31,7 +18,7 @@ in {
       myEmacs
 
       # browsers
-      (myChrome.override {
+      (google-chrome.override {
         commandLineArgs =
           ""
           + " --enable-zero-copy" # dont enable in about:flags
