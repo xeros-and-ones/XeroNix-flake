@@ -16,6 +16,7 @@
     ./hardware-configuration.nix
     ./gpu.nix
     ./power.nix
+    ../shared/core/bluetooth.nix
 
     ../shared/users/xero
 
