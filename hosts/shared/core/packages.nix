@@ -21,10 +21,6 @@ in {
       (google-chrome.override {
         commandLineArgs =
           ""
-          + " --enable-zero-copy" # dont enable in about:flags
-          + " --ignore-gpu-blocklist" # dont enable in about:flags
-          + " --enable-raw-draw"
-          + " --canvas-oop-rasterization"
           ############ disable Features
           + " --disable-features="
           + "UseChromeOSDirectVideoDecoder,"
