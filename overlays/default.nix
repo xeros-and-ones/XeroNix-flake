@@ -1,5 +1,7 @@
 # This file defines overlays
-{inputs, ...}: {
+{inputs, ...}: let
+  chrome-125-src = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/67b4bf1df4ae54d6866d78ccbd1ac7e8a8db8b73.tar.gz");
+in {
   # This one brings our custom packages from the 'pkgs' directory
   additions = final: _prev: import ../pkgs {pkgs = final;};
 
@@ -10,5 +12,6 @@
     # example = prev.example.overrideAttrs (oldAttrs: rec {
     # ...
     # });
+    myChrome = chrome-125-src.google-chrome;
   };
 }
