@@ -18,7 +18,7 @@ in {
       myEmacs
 
       # browsers
-      (google-chrome.override {
+      (myChrome.override {
         commandLineArgs =
           ""
           + " --enable-zero-copy" # dont enable in about:flags
