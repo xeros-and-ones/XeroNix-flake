@@ -6,5 +6,6 @@
   };
   environment.systemPackages = with pkgs; [
     kdePackages.qtstyleplugin-kvantum libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.plasma-browser-integration kdePackages.plasma-browser-integration
   ];
 }
