@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+{pkgs, system, ...}: let
   myEmacs =
     (pkgs.emacsPackagesFor (pkgs.emacs29.override {
       withNativeCompilation = true;
