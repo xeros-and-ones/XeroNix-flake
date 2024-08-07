@@ -39,6 +39,7 @@ in {
         .overrideAttrs {
           version = "126.0.6478.126	";
           src = fetchurl {
+            url = "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_126.0.6478.126	-1_amd64.deb";
             hash = "";
           };
         })
