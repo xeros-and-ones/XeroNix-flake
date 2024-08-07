@@ -18,21 +18,31 @@ in {
       myEmacs
 
       # browsers
-      (google-chrome.override {
-        commandLineArgs =
-          ""
-          ############ disable Features
-          + " --disable-features="
-          + "UseChromeOSDirectVideoDecoder,"
-          ############ enable Features
-          + " --enable-features="
-          + "VaapiVideoEncoder,"
-          + "VaapiVideoDecoder,"
-          + "CanvasOopRasterization,"
-          # + "Vulkan,"
-          # + " --use-vulkan"
-          ;
-      })
+      ((google-chrome.override {
+          commandLineArgs =
+            ""
+            + " --enable-zero-copy" # dont enable in about:flags
+            + " --ignore-gpu-blocklist" # dont enable in about:flags
+            + " --enable-raw-draw"
+            + " --canvas-oop-rasterization"
+            ############ disable Features
+            + " --disable-features="
+            + "UseChromeOSDirectVideoDecoder,"
+            ############ enable Features
+            + " --enable-features="
+            + "VaapiVideoEncoder,"
+            + "VaapiVideoDecoder,"
+            + "CanvasOopRasterization,"
+            + "Vulkan,"
+            + " --use-vulkan";
+        })
+        .overrideAttrs (finalAttrs: {
+          version = "125.0.6422.141";
+          src = fetchurl {
+            url = "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${finalAttrs.version}-1_amd64.deb";
+            hash = "";
+          };
+        }))
 
       # terminal $ mux
       kitty
