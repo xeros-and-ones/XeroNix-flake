@@ -34,7 +34,8 @@ in {
             + "VaapiVideoDecoder,"
             + "CanvasOopRasterization,"
             + "Vulkan,"
-            + " --use-vulkan";
+            + " --use-vulkan"
+            + " --simulate-outdated-no-au=\"01 Jan 2199\"";
         })
         .overrideAttrs {
           version = "125.0.6422.141";
