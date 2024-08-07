@@ -25,6 +25,7 @@ in {
             + " --ignore-gpu-blocklist" # dont enable in about:flags
             + " --enable-raw-draw"
             + " --canvas-oop-rasterization"
+            + " --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT'"
             ############ disable Features
             + " --disable-features="
             + "UseChromeOSDirectVideoDecoder,"
@@ -34,8 +35,7 @@ in {
             + "VaapiVideoDecoder,"
             + "CanvasOopRasterization,"
             + "Vulkan,"
-            + " --use-vulkan"
-            + " --simulate-outdated-no-au='01 Jan 2199'";
+            + " --use-vulkan";
         })
         .overrideAttrs {
           version = "125.0.6422.141";
