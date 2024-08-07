@@ -37,10 +37,9 @@ in {
             + " --use-vulkan";
         })
         .overrideAttrs {
-          version = "125.0.6422.141";
+          version = "126.0.6478.126	";
           src = fetchurl {
-            url = "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_125.0.6422.141-1_amd64.deb";
-            hash = "sha256-nIdzl3DkvGy9EsNS8nvPi8yK0gvx9mFaxYSxuYZZzxI=";
+            hash = "";
           };
         })
 
