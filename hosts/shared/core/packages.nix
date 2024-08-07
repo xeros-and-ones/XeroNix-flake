@@ -22,15 +22,16 @@ in {
         commandLineArgs =
           ""
           ############ disable Features
-          # + " --disable-features="
-          # + "UseChromeOSDirectVideoDecoder,"
+          + " --disable-features="
+          + "UseChromeOSDirectVideoDecoder,"
           ############ enable Features
           + " --enable-features="
           + "VaapiVideoEncoder,"
           + "VaapiVideoDecoder,"
-          # + "CanvasOopRasterization,"
-          + "Vulkan,"
-          + " --use-vulkan";
+          + "CanvasOopRasterization,"
+          # + "Vulkan,"
+          # + " --use-vulkan"
+          ;
       })
 
       # terminal $ mux
