@@ -68,6 +68,9 @@ in {
       vdpauinfo
       intel-gpu-tools
       bleachbit
+      emote
+      kdePackages.kcalc
+      kdePackages.kamera
 
       # clipboard tools
       xclip
