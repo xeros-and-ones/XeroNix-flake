@@ -22,8 +22,8 @@ in {
         commandLineArgs =
           ""
           ############ disable Features
-          + " --disable-features="
-          + "UseChromeOSDirectVideoDecoder,"
+          # + " --disable-features="
+          # + "UseChromeOSDirectVideoDecoder,"
           ############ enable Features
           + " --enable-features="
           + "VaapiVideoEncoder,"
