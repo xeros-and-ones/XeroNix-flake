@@ -28,7 +28,7 @@ in {
           + " --enable-features="
           + "VaapiVideoEncoder,"
           + "VaapiVideoDecoder,"
-          + "CanvasOopRasterization,"
+          # + "CanvasOopRasterization,"
           + "Vulkan,"
           + " --use-vulkan";
       })
