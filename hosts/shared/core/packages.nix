@@ -36,13 +36,13 @@ in {
             + "Vulkan,"
             + " --use-vulkan";
         })
-        .overrideAttrs (finalAttrs: {
+        .overrideAttrs {
           version = "125.0.6422.141";
           src = fetchurl {
-            url = "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${finalAttrs.version}-1_amd64.deb";
+            url = "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_125.0.6422.141-1_amd64.deb";
             hash = "";
           };
-        }))
+        })
 
       # terminal $ mux
       kitty
