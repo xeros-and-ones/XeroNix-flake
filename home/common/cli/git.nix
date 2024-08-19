@@ -5,7 +5,7 @@
     userName = "Mohamed Tarek";
     userEmail = "mohamed96tarek@hotmail.com";
     delta = {
-      enable = true;
+      enable = false;
       package = pkgs.delta;
       options = {
         navigate = true;
