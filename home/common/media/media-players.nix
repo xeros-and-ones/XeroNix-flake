@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [tauon haruna];
+  home.packages = with pkgs; [haruna];
 }
