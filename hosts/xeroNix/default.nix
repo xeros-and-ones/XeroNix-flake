@@ -76,7 +76,9 @@
       };
     };
   };
-
+  boot = {
+    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  };
   services.fstrim.enable = true;
   fileSystems."/mnt/Data" = {
     device = "dev/disk/by-label/Data";
