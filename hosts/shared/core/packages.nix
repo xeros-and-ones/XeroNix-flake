@@ -7,6 +7,11 @@
     }))
     .emacsWithPackages (epkgs: with epkgs; [vterm treesit-grammars.with-all-grammars]);
 in {
+  programs.java = {
+    enable = true;
+    package = pkgs.temurin-jre-bin-17;
+  };
+
   environment = {
     systemPackages = with pkgs; [
       # network tools
