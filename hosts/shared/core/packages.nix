@@ -23,6 +23,7 @@ in {
       myEmacs
 
       # browsers
+      vivaldi
       ((google-chrome.override {
           commandLineArgs =
             ""
