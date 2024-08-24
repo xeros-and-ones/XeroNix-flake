@@ -23,7 +23,6 @@ in {
       myEmacs
 
       # browsers
-      vivaldi
       ((google-chrome.override {
           commandLineArgs =
             ""
@@ -138,7 +137,7 @@ in {
       marksman # language server for markdown
 
       # nix tools
-      nixd
+      nil
       alejandra
       nixfmt-classic
 
