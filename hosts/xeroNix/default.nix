@@ -76,9 +76,6 @@
       };
     };
   };
-  boot = {
-    kernelPackages = pkgs.linuxPackages_lqx;
-  };
   services.fstrim.enable = true;
   fileSystems."/mnt/Data" = {
     device = "dev/disk/by-label/Data";
