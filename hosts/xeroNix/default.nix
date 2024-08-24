@@ -77,7 +77,7 @@
     };
   };
   boot = {
-    kernelPackages = pkgs.linuxKernel.kernels.linux_xanmod;
+    kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
   };
   services.fstrim.enable = true;
   fileSystems."/mnt/Data" = {
