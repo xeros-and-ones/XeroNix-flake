@@ -137,7 +137,7 @@ in {
       marksman # language server for markdown
 
       # nix tools
-      nil
+      nixd
       alejandra
       nixfmt-classic
 
