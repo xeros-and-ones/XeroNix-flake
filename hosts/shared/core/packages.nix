@@ -16,6 +16,7 @@ in {
     systemPackages = with pkgs; [
       # network tools
       wget
+      yt-dlp
       # editors
       neovim
       vscode
