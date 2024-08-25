@@ -17,6 +17,7 @@ in {
       # network tools
       wget
       yt-dlp
+      uget
       # editors
       neovim
       vscode
