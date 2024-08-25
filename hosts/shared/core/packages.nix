@@ -18,6 +18,7 @@ in {
       wget
       yt-dlp
       uget
+      uget-integrator
       # editors
       neovim
       vscode
