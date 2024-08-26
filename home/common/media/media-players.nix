@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [haruna];
+  home.packages = with pkgs; [haruna mpc-qt];
 }
