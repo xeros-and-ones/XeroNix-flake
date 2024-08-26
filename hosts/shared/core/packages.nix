@@ -14,6 +14,9 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
+      # Media Players
+      haruna
+      mpc-qt
       # network tools
       wget
       yt-dlp
