@@ -50,6 +50,11 @@
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = "23.11";
   };
+xdg = {
+  enable = true;
+  systemDirs = {
+    data = [ "$HOME/.nix-profile/share" ];
+  };
 
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
