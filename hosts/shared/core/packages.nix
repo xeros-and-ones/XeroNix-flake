@@ -14,7 +14,8 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
-      # Media Players
+      # Media tools
+      exiftool
       haruna
       mpc-qt
       # network tools
