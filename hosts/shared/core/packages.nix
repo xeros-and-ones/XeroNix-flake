@@ -16,13 +16,9 @@ in {
     systemPackages = with pkgs; [
       # Media tools
       exiftool
-      haruna
-      mpc-qt
       # network tools
       wget
       yt-dlp
-      uget
-      uget-integrator
       # editors
       neovim
       vscode
