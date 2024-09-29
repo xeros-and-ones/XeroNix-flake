@@ -11,6 +11,7 @@ in {
     enable = true;
     package = pkgs.temurin-jre-bin-17;
   };
+  programs.adb.enable = true;
 
   environment = {
     systemPackages = with pkgs; [
