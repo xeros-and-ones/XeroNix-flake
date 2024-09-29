@@ -26,6 +26,7 @@ in {
         "git"
         "libvirtd"
         "deluge"
+        "adbusers"
       ];
 
     description = "Mohamed Tarek";
