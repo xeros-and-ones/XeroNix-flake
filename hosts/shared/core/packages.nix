@@ -84,7 +84,7 @@ in {
       # clipboard tools
       xclip
       wl-clipboard
-      qbittorrent-qt5
+      qbittorrent
 
       ###### dev tools
       #-- c/c++
