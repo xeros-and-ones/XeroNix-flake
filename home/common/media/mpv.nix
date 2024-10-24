@@ -1,4 +1,8 @@
-{pkgs, config, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   programs.mpv = {
     enable = true;
     scripts = with pkgs.mpvScripts; [mpris uosc thumbfast];
@@ -6,15 +10,12 @@
       force-window = true;
       geometry = "100%x100%-+0-+0";
 
-      profile = "gpu-hq";
-      input-ipc-server = "/tmp/mpvsocket";
       # no-border = true;
       save-position-on-quit = true;
       force-seekable = "yes";
       cursor-autohide = 100;
 
       vo = "gpu-next";
-      gpu-api = "vulkan";
       hwdec-codecs = "all";
 
       # forces showing subtitles while seeking through the video
@@ -24,9 +25,6 @@
       deband-grain = 0;
       deband-range = 12;
       deband-threshold = 32;
-
-      dither-depth = "auto";
-      dither = "fruit";
 
       sub-auto = "fuzzy";
       # some settings fixing VOB/PGS subtitles (creating blur & changing yellow subs to gray)
